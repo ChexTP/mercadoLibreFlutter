@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mercado_libre_app/src/widgets/curvedNavigationBar.dart';
 import 'package:mercado_libre_app/src/widgets/gridCardCustom.dart';
-
 import 'package:mercado_libre_app/src/widgets/searchBar.dart';
 import 'package:mercado_libre_app/src/widgets/appBarCustom.dart';
+
+  
 
 class MenuPrincipal extends StatefulWidget {
   const MenuPrincipal({super.key});
@@ -23,14 +25,19 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
           children: [
             SearchBarCustom(),
             // SizedBox(height: 10,),
-            GridCardCustom()
+            GridCardCustom(),
+
+            
           ],
           
         ),
       ),
-       
+      bottomNavigationBar: NavigationBarWidget(),
+  
     );
   }
+
+  
 
   
 }

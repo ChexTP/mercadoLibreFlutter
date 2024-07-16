@@ -22,6 +22,7 @@ class GridCardCustom extends StatelessWidget {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             margin: const EdgeInsets.all(5),
             child: InkWell(
+              splashColor:Color.fromARGB(133, 13, 4, 98),
               onTap: (){},
               child: Padding(
                 padding: EdgeInsets.all(8.0),
@@ -33,7 +34,7 @@ class GridCardCustom extends StatelessWidget {
                     Text(
                       categories[index]['titulo'],
                       textAlign:TextAlign.center,
-                      style: TextStyle(color:Color.fromARGB(255, 11, 9, 30),fontSize: 17),)
+                      style: const TextStyle(color:Color.fromARGB(255, 11, 9, 30),fontSize: 17),)
                   ],
                 ),
               ),
