@@ -13,3 +13,10 @@ final List<Map<String, dynamic>> categories = [
   {'codigo': '010', 'icono': Icons.fastfood, 'titulo': 'Alimentos y bebidas'},
   {'codigo': '011', 'icono': Icons.pets, 'titulo': 'Animales y mascotas'},
 ];
+
+class User{
+  final String name;
+  final String password;
+
+  User({required this.name, required this.password});
+}

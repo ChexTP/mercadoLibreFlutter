@@ -29,12 +29,12 @@ class GridCardCustom extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(categories[index]['icono'],size: 40,),
+                    Icon(categories[index]['icono'],size: 40,color: Colors.white,),
                     SizedBox(height: 10,),
                     Text(
                       categories[index]['titulo'],
                       textAlign:TextAlign.center,
-                      style: const TextStyle(color:Color.fromARGB(255, 11, 9, 30),fontSize: 17),)
+                      style: const TextStyle(color:Colors.white,fontSize: 17),)
                   ],
                 ),
               ),

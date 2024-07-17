@@ -18,7 +18,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
           children: [
             const Text(
               "Mercado libre Col",
-              style: TextStyle(color: Color.fromARGB(255, 11, 9, 30), fontWeight: FontWeight.w500),
+              style: TextStyle(color:Colors.white, fontWeight: FontWeight.w500),
             ),
             ElevatedButton(
               onPressed: () {},

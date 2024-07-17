@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mercado_libre_app/src/models/categories.dart';
 import 'package:mercado_libre_app/src/widgets/curvedNavigationBar.dart';
 import 'package:mercado_libre_app/src/widgets/gridCardCustom.dart';
 import 'package:mercado_libre_app/src/widgets/searchBar.dart';
@@ -7,7 +8,8 @@ import 'package:mercado_libre_app/src/widgets/appBarCustom.dart';
   
 
 class MenuPrincipal extends StatefulWidget {
-  const MenuPrincipal({super.key});
+  final User userData;
+  const MenuPrincipal({super.key, required this.userData});
 
   @override
   State<MenuPrincipal> createState() => _MenuPrincipalState();
