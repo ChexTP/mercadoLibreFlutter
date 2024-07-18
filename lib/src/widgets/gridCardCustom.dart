@@ -16,7 +16,7 @@ class GridCardCustom extends StatelessWidget {
         itemCount:  categories.length, 
         itemBuilder: (BuildContext context, int index){
           return Card(
-            color:const   Color.fromARGB(255, 255, 8, 0),
+            color:Color.fromARGB(255, 155, 51, 47),
             shadowColor: const Color.fromARGB(255, 255, 8, 0) ,
             elevation:30,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

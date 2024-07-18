@@ -1,8 +1,8 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:mercado_libre_app/src/screens/mainLayout.dart';
 import 'package:mercado_libre_app/src/models/categories.dart';
-import 'package:mercado_libre_app/src/routers/app_routes.dart';
 
 class Loginscreen extends StatefulWidget {
 
@@ -21,7 +21,7 @@ class _LoginscreenState extends State<Loginscreen> {
 
   @override
   Widget build(BuildContext context) {
-    final userData= User(name: _name, password: _password);
+    
     return Scaffold(
       body: Stack(
         children: [
@@ -169,17 +169,34 @@ class _LoginscreenState extends State<Loginscreen> {
                             ),
                               onPressed: () async {
                                 if (_formKey.currentState!.validate()) {
-                                  Navigator.of(context).pushReplacementNamed(AppRoutes.home,arguments: userData);
-                                  // bool loginSuccessful = await login(_email, _password);
-                                  // if (loginSuccessful) {
-                                  //   Navigator.pushReplacementNamed(context, '/menu_principal');
-                                  } 
-                                  else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('Credenciales incorrectas')));
-                                  }
-                                
+                                  // Suponiendo que tienes una instancia de User llamada userData con los datos correctos
+                                  User userData = User(name:_name, password: _password);
+
+                                  // Navegación con transición Slide desde la derecha
+                                  Navigator.of(context).pushReplacement(
+                                    PageRouteBuilder(
+                                      pageBuilder: (context, animation, secondaryAnimation) => MainScreen(userData: userData),
+                                      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                        const begin = Offset(1.0, 0.0);
+                                        const end = Offset.zero;
+                                        const curve = Curves.ease;
+                                        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+                                        var offsetAnimation = animation.drive(tween);
+
+                                        return SlideTransition(
+                                          position: offsetAnimation,
+                                          child: child,
+                                        );
+                                      },
+                                    ),
+                                  );
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text('Credenciales incorrectas')),
+                                  );
+                                }
                               },
+
                             child: const Text('Ingresar'),
                           ), 
                             
@@ -238,7 +255,7 @@ class _LoginscreenState extends State<Loginscreen> {
                             ),
                           ),
                           const SizedBox(height: 15,),                           
-                          Text(
+                          const Text(
                             'Registrate',
                             style: TextStyle(
                               color: Colors.white,

@@ -29,7 +29,7 @@ class SearchBarCustom extends StatelessWidget {
     
                     ),
                     filled: true,
-                    fillColor: const Color.fromARGB(255, 255, 8, 0)
+                    fillColor: Color.fromARGB(255, 155, 51, 47)
                   ),
                 )),
                 const SizedBox(width: 10.0),
