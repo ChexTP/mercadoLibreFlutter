@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:mercado_libre_app/src/screens/LoginScreen.dart'; // Asegúrate de importar tu modelo User
+import 'package:mercado_libre_app/src/screens/login_screen.dart'; // Asegúrate de importar tu modelo User
 // Ajusta la ruta según la ubicación de tu MainScreen
 
 void main(List<String> args) {
@@ -8,6 +8,7 @@ void main(List<String> args) {
 }
 
 class ProyectoMercadoLibre extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const ProyectoMercadoLibre({Key? key});
 
   @override

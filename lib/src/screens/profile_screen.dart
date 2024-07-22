@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mercado_libre_app/src/models/categories.dart';
-import 'package:mercado_libre_app/src/widgets/InputProfile.dart';
+import 'package:mercado_libre_app/src/widgets/input_profile.dart';
 
 
 class Profilescreen extends StatelessWidget {

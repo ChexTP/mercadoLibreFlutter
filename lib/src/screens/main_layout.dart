@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:mercado_libre_app/src/models/categories.dart';
-import 'package:mercado_libre_app/src/screens/ProfileScreen.dart';
-import 'package:mercado_libre_app/src/screens/menuPrincipal.dart';
+import 'package:mercado_libre_app/src/screens/profile_screen.dart';
+import 'package:mercado_libre_app/src/screens/menu_principal.dart';
+import 'package:mercado_libre_app/src/screens/users_screen.dart';
 
-import 'package:mercado_libre_app/src/widgets/appBarCustom.dart';
+import 'package:mercado_libre_app/src/widgets/app_bar_custom.dart';
 
 class MainScreen extends StatefulWidget {
   final User userData;
+  // ignore: use_super_parameters
   const MainScreen({Key? key, required this.userData}) : super(key: key);
 
   @override
@@ -33,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustom(),
+      appBar: const AppBarCustom(),
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
@@ -44,6 +46,7 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           MenuPrincipal(userData: widget.userData),
           Profilescreen(userData: widget.userData),
+          UsersListScreen()
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(
@@ -51,6 +54,7 @@ class _MainScreenState extends State<MainScreen> {
         height: 60.0,
         items: const <Widget>[
           Icon(Icons.home, size: 40, color: Colors.white),
+          Icon(Icons.person, size: 40, color: Colors.white),
           Icon(Icons.person, size: 40, color: Colors.white),
         ],
         color: const Color.fromARGB(255, 155, 51, 47),
@@ -62,6 +66,7 @@ class _MainScreenState extends State<MainScreen> {
             _currentIndex = index;
             _pageController.animateToPage(
               index,
+              
               duration: const Duration(milliseconds: 300),
               curve: Curves.ease,
             );

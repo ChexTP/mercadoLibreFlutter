@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mercado_libre_app/src/models/categories.dart';
-import 'package:mercado_libre_app/src/widgets/gridCardCustom.dart';
-import 'package:mercado_libre_app/src/widgets/searchBar.dart';
+import 'package:mercado_libre_app/src/widgets/grid_card_custom.dart';
+import 'package:mercado_libre_app/src/widgets/search_bar.dart';
 
 class MenuPrincipal extends StatefulWidget {
   final User userData;
