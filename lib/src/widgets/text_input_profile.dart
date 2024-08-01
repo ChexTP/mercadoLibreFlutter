@@ -16,9 +16,10 @@ class TextInputProfile extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title,style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
+        Text(title,style: const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold)),
         Text(value,style: const TextStyle(color: Colors.white,fontSize: 20,)),
       ],
     );
   }
 }
+
